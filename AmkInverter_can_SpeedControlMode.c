@@ -1,3 +1,9 @@
+// Should separate the inverter intenner can line  <--->  main can line 
+
+
+
+
+
 #include "AmkInverter_can.h"
 #include "HLD.h"
 
@@ -263,7 +269,7 @@ void AmkInverter_can_write(amkSetpoint1 *INV, CanCommunication_Message TC, uint1
     INV->S.AMK_bDcOn = SWITCH.DCon;
     INV->S.AMK_bEnable = SWITCH.Enable;
     INV->S.AMK_bInverterOn = SWITCH.inverter;
-    INV->S.AMK_TargetVelocity  = SWITCH.SpeedSetpoint;
+    INV->S.AMK_Speed_setpoint  = SWITCH.SpeedSetpoint;
     INV->S.AMK_TorqueLimitNegativ = SWITCH.negTorquelimit;
     // if (SWITCH.ErrorReset){
         INV->S.AMK_bErrorReset = SWITCH.ErrorReset;
@@ -690,6 +696,3 @@ void AMKInverter_runLogging_10ms(void)
 	CanCommunication_transmitMessage(&amk_actual_values2_fl_msgObj);
 	CanCommunication_transmitMessage(&amk_actual_values2_fr_msgObj);
 }
-
-
-//11111

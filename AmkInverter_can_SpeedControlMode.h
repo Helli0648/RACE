@@ -74,7 +74,11 @@ typedef union
 			boolean AMK_bEnable : 1;
 			boolean AMK_bErrorReset : 1;
 			uint8 AMK_bReserve2 : 4;
+<<<<<<< HEAD
 	    	sint16 AMK_TargetVelocity: 16;	//Should be changed to index6 (1/rpm) 
+=======
+	    	sint16 AMK_Speed_setpoint: 16;	//0.1Mn
+>>>>>>> origin/main
 	        sint16 AMK_TorqueLimitPositv : 16;
 	        sint16 AMK_TorqueLimitNegativ : 16;
 	    }S;
