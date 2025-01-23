@@ -7,6 +7,18 @@
 #include "AmkInverter_can.h"
 #include "HLD.h"
 
+=======
+<<<<<<< HEAD
+#include "AmkInverter_can.h"
+#include "HLD.h"
+
+=======
+#include "AmkInverter_can_SpeedControlMode.h"
+#include "HLD.h"
+
+
+>>>>>>> origin/main
+>>>>>>> origin/Refactorin_to_more_clean_codes
 const float Inverter_peak_current = 107.2;
 const float Nominal_torque = 9.8;
 const uint16 InvCtr = 0x160;
