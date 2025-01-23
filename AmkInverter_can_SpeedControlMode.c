@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 #include "AmkInverter_can.h"
 #include "HLD.h"
 
+=======
+#include "AmkInverter_can_SpeedControlMode.h"
+#include "HLD.h"
+
+
+>>>>>>> origin/main
 const float Inverter_peak_current = 107.2;
 const float Nominal_torque = 9.8;
 const uint16 InvCtr = 0x160;
@@ -263,7 +270,11 @@ void AmkInverter_can_write(amkSetpoint1 *INV, CanCommunication_Message TC, uint1
     INV->S.AMK_bDcOn = SWITCH.DCon;
     INV->S.AMK_bEnable = SWITCH.Enable;
     INV->S.AMK_bInverterOn = SWITCH.inverter;
+<<<<<<< HEAD
     INV->S.AMK_TargetVelocity  = SWITCH.SpeedSetpoint;
+=======
+    INV->S.AMK_Speed_setpoint  = SWITCH.SpeedSetpoint;
+>>>>>>> origin/main
     INV->S.AMK_TorqueLimitNegativ = SWITCH.negTorquelimit;
     // if (SWITCH.ErrorReset){
         INV->S.AMK_bErrorReset = SWITCH.ErrorReset;
@@ -689,7 +700,11 @@ void AMKInverter_runLogging_10ms(void)
 	//Transmit CAM msg of AMK_Actual_Values2 to node0(main bus)
 	CanCommunication_transmitMessage(&amk_actual_values2_fl_msgObj);
 	CanCommunication_transmitMessage(&amk_actual_values2_fr_msgObj);
+<<<<<<< HEAD
 }
 
 
 //11111
+=======
+}
+>>>>>>> origin/main
